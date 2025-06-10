@@ -1,4 +1,4 @@
-# Awesome pinger
+# 🛸 Awesome pinger
 
 A simple HTTP probe service that is core of our awesome monitoring stuff ;)
 
@@ -72,13 +72,10 @@ Send requests:
 
 ```bash
 # Ping localhost
-curl 'http://127.0.0.1:8080?ip=127.0.0.1'       
-
-# Run another command (e.g., list interfaces)
-curl 'http://127.0.0.1:8080?ip=127.0.0.1%3Bip%20a'  
+curl 'http://127.0.0.1:8080?ip=127.0.0.1'
 ```
 
-The response will be the raw output of the executed command, URL-escaped in JSON or plain text depending on your server settings.
+The response will be the json.
 
 ---
 
