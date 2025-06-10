@@ -82,15 +82,11 @@ The response will be the raw output of the executed command, URL-escaped in JSON
 
 ---
 
-## Security Warning
+## Warning
 
-**This service is intentionally insecure.**
+**This service is just a demo!**
 
-- **DO NOT** expose it to untrusted networks.
 - **DO NOT** use in production or with privileged commands.
-- Demonstrates command injection vulnerabilities when input is not sanitized.
-
-To secure it, escape or whitelist inputs, avoid direct shell execution, and prefer using libraries or system calls instead of `bash -c`.
 
 ---
 
