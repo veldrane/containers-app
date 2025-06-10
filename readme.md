@@ -1,15 +1,13 @@
-# Vulnerable Ping Web Service
+# Awesome pinger
 
-A simple Rust-based HTTP service that accepts an `ip` parameter via the query string, URL-decodes it, and executes a ping command (or any provided shell command) against that parameter. This intentionally vulnerable example illustrates how improper input sanitization can lead to command injection.
+A simple HTTP probe service that is core of our awesome monitoring stuff ;)
 
 ---
 
 ## Features
 
-- Listens on `0.0.0.0:8080` for HTTP GET requests.
-- Parses query string, URL-decodes values (e.g., `%20` → space, `%3B` → `;`, `%2F` → `/`).
-- Passes the decoded string directly into a shell command (e.g., `ping`, `ip a`).
-- Demonstrates the danger of shelling out without validation.
+- Listens on `0.0.0.0:8080` for HTTP GET requests from monitoring server.
+- Knows how to ping machines inside the network.
 
 ---
 
@@ -26,8 +24,8 @@ A simple Rust-based HTTP service that accepts an `ip` parameter via the query st
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/yourname/vulnerable-ping-service.git
-   cd vulnerable-ping-service
+   git clone https://github.com/veldrane/awesome-pinger
+   cd awesome-pinger
    ```
 
 2. **Add the MUSL target for static linking (optional)**
@@ -39,14 +37,16 @@ A simple Rust-based HTTP service that accepts an `ip` parameter via the query st
 3. **Build**
 
    - Dynamic build (glibc):
-     ```bash
-     cargo build --release
-     ```
+   ```bash
+   make
+   sudo make install
+   ```
 
-   - Static build (musl):
-     ```bash
-     cargo build --release --target x86_64-unknown-linux-musl
-     ```
+- Static build (musl):
+   ```bash
+   make static
+   sudo make install
+   ```
 
 4. **Strip binary (optional)**
 
@@ -62,10 +62,10 @@ Run the server:
 
 ```bash
 # Dynamic
-./target/release/pinger
+/usr/local/bin/pinger
 
 # Or static
-./target/x86_64-unknown-linux-musl/release/pinger
+/usr/local/bin/pinger-static
 ```
 
 Send requests:
