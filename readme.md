@@ -24,8 +24,8 @@ A simple HTTP probe service that is core of our awesome monitoring stuff ;)
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/veldrane/awesome-pinger
-   cd awesome-pinger
+   git clone github.com/veldrane/containers-app
+   cd containers-app
    ```
 
 2. **Add the MUSL target for static linking (optional)**
