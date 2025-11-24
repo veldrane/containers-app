@@ -45,7 +45,7 @@ A simple HTTP probe service that is core of our awesome monitoring stuff ;)
 - Static build (musl):
    ```bash
    make static
-   sudo make install
+   sudo make install-static
    ```
 
 4. **Strip binary (optional)**
