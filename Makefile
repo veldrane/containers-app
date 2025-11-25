@@ -10,11 +10,11 @@ static:
 # Install to /usr/local/bin (can be overridden by PREFIX)
 PREFIX ?= /usr/local
 
-install: build
+install:
 	install -Dm755 target/release/pinger $(PREFIX)/bin/pinger
 
 # Install static binary to /usr/local/bin (can be overridden by PREFIX)
-install-static: static
+install-static:
 	install -Dm755 target/x86_64-unknown-linux-musl/release/pinger $(PREFIX)/bin/pinger-static
 
 # Remove build artifacts

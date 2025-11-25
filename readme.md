@@ -24,7 +24,7 @@ A simple HTTP probe service that is core of our awesome monitoring stuff ;)
 1. **Clone the repository**
 
    ```bash
-   git clone github.com/veldrane/containers-app
+   git clone https://github.com/veldrane/containers-app.git
    cd containers-app
    ```
 
@@ -45,7 +45,7 @@ A simple HTTP probe service that is core of our awesome monitoring stuff ;)
 - Static build (musl):
    ```bash
    make static
-   sudo make install
+   sudo make install-static
    ```
 
 4. **Strip binary (optional)**
