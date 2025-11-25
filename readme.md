@@ -24,7 +24,7 @@ A simple HTTP probe service that is core of our awesome monitoring stuff ;)
 1. **Clone the repository**
 
    ```bash
-   git clone github.com/veldrane/containers-app
+   git clone https://github.com/veldrane/containers-app.git
    cd containers-app
    ```
 
